@@ -1,0 +1,355 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      // Navigation
+      'nav.home': 'Home',
+      'nav.routes': 'Routes',
+      'nav.about': 'About',
+      'nav.support': 'Support',
+      'nav.signin': 'Sign In',
+      'nav.signout': 'Sign Out',
+      
+      // Hero Section
+      'hero.title': 'Journey Through the',
+      'hero.titleHighlight': 'Holy Land',
+      'hero.subtitle': 'Premium bus services connecting Saudi Arabia\'s sacred cities',
+      'hero.oneWay': 'One Way',
+      'hero.roundTrip': 'Round Trip',
+      'hero.from': 'Travel from City',
+      'hero.to': 'Travel to City',
+      'hero.travelDate': 'Travel Date',
+      'hero.returnDate': 'Return Date',
+      'hero.passengers': 'Number of passengers',
+      'hero.passenger': 'passenger',
+      'hero.fullTicketNote': 'A full ticket is required for children over 6 years old',
+      'hero.searchBuses': 'Search Buses',
+      'hero.showBusTrips': 'Show Go Bus Trips',
+      
+      // Cities
+      'city.riyadh': 'Riyadh',
+      'city.jeddah': 'Jeddah',
+      'city.makkah': 'Makkah',
+      'city.madinah': 'Madinah',
+      'city.dammam': 'Dammam',
+      
+      // Search Results
+      'search.availableBuses': 'Available Buses',
+      'search.departure': 'Departure',
+      'search.arrival': 'Arrival',
+      'search.duration': 'Duration',
+      'search.availableSeats': 'Available Seats',
+      'search.selectSeats': 'Select Seats',
+      
+      // Seat Selection
+      'seat.selectSeats': 'Select Your Seats',
+      'seat.available': 'Available',
+      'seat.selected': 'Selected',
+      'seat.occupied': 'Occupied',
+      'seat.bookingSummary': 'Booking Summary',
+      'seat.selectedSeats': 'Selected Seats',
+      'seat.ticketPrice': 'Ticket Price',
+      'seat.serviceFee': 'Service Fee',
+      'seat.total': 'Total',
+      'seat.promoCode': 'Promo Code',
+      'seat.enterPromoCode': 'Enter promo code',
+      'seat.apply': 'Apply',
+      'seat.continueToPassenger': 'Continue to Passenger Details',
+      
+      // Booking Confirmation
+      'booking.confirmed': 'Booking Confirmed!',
+      'booking.successMessage': 'Your ticket has been successfully booked',
+      'booking.reference': 'Booking Reference:',
+      'booking.tripDetails': 'Trip Details',
+      'booking.route': 'Route',
+      'booking.date': 'Date',
+      'booking.seat': 'Seat',
+      'booking.bus': 'Bus',
+      'booking.passenger': 'Passenger',
+      'booking.payment': 'Payment',
+      'booking.digitalTicket': 'Digital Ticket',
+      'booking.showQR': 'Show this QR code at the boarding gate',
+      'booking.downloadPDF': 'Download PDF Ticket',
+      'booking.shareTicket': 'Share Ticket',
+      'booking.viewBookings': 'View My Bookings',
+      'booking.bookAnother': 'Book Another Trip',
+      
+      // User Dashboard
+      'dashboard.myAccount': 'My Account',
+      'dashboard.manageBookings': 'Manage your bookings and profile information',
+      'dashboard.myBookings': 'My Bookings',
+      'dashboard.profileSettings': 'Profile Settings',
+      'dashboard.notifications': 'Notifications',
+      'dashboard.upcomingTrips': 'Upcoming Trips',
+      'dashboard.pastTrips': 'Past Trips',
+      'dashboard.confirmed': 'Confirmed',
+      'dashboard.completed': 'Completed',
+      'dashboard.showTicket': 'Show Ticket',
+      'dashboard.cancel': 'Cancel',
+      'dashboard.downloadReceipt': 'Download Receipt',
+      
+      // Authentication
+      'auth.welcome': 'Welcome to Haramain',
+      'auth.signInMessage': 'Sign in to book your journey',
+      'auth.phoneNumber': 'Phone Number',
+      'auth.sendOTP': 'Send OTP',
+      'auth.continueWith': 'Or continue with',
+      'auth.enterOTP': 'Enter OTP',
+      'auth.otpSent': 'We sent a verification code to',
+      'auth.verify': 'Verify & Sign In',
+      'auth.resendOTP': 'Resend OTP',
+      
+      // Live Chat
+      'chat.liveSupport': 'Live Support',
+      'chat.onlineNow': 'Online now',
+      'chat.welcomeMessage': 'Welcome to Haramain! How can we help you today?',
+      'chat.supportAgent': 'Support Agent',
+      'chat.typeMessage': 'Type your message...',
+      
+      // Footer
+      'footer.tagline': 'Connecting Saudi Arabia\'s sacred cities with comfort, reliability, and modern technology.',
+      'footer.quickLinks': 'Quick Links',
+      'footer.bookTrip': 'Book a Trip',
+      'footer.manageBooking': 'Manage Booking',
+      'footer.busSchedules': 'Bus Schedules',
+      'footer.routeMap': 'Route Map',
+      'footer.support': 'Support',
+      'footer.helpCenter': 'Help Center',
+      'footer.contactUs': 'Contact Us',
+      'footer.terms': 'Terms of Service',
+      'footer.privacy': 'Privacy Policy',
+      'footer.contactInfo': 'Contact Info',
+      'footer.copyright': '© 2024 Haramain Bus Services. All rights reserved. Licensed by Saudi Transport Authority.',
+      
+      // Common
+      'common.loading': 'Loading...',
+      'common.error': 'Error',
+      'common.retry': 'Retry',
+      'common.close': 'Close',
+      'common.save': 'Save',
+      'common.cancel': 'Cancel',
+      'common.name': 'Name',
+      'common.phone': 'Phone',
+      'common.email': 'Email',
+      'common.status': 'Status',
+      'common.amount': 'Amount',
+      'common.method': 'Method',
+      'common.paid': 'Paid',
+      'currency.sar': 'SAR',
+      
+      // Payment
+      'payment.securePayment': 'Secure Payment',
+      'payment.completeBooking': 'Complete your booking with secure payment',
+      'payment.bookingSummary': 'Booking Summary',
+      'payment.selectedSeats': 'Selected Seats',
+      'payment.passengers': 'Passengers',
+      'payment.subtotal': 'Subtotal',
+      'payment.discount': 'Discount',
+      'payment.total': 'Total',
+      'payment.bookingRef': 'Booking Ref',
+      'payment.paymentMethod': 'Payment Method',
+      'payment.payNow': 'Pay Now',
+      'payment.processing': 'Processing...',
+      'payment.back': 'Back to Seat Selection',
+      'payment.secureNote': 'Your payment information is encrypted and secure',
+      'payment.cardDetails': 'Card Details',
+      
+      // Admin
+      'admin.dashboard': 'Admin Dashboard',
+      'admin.manageOperations': 'Manage operations, routes, and view analytics',
+      'admin.totalBookings': 'Total Bookings',
+      'admin.revenueToday': 'Revenue Today',
+      'admin.activeRoutes': 'Active Routes',
+      'admin.fleetSize': 'Fleet Size',
+      'admin.quickActions': 'Quick Actions',
+      'admin.addRoute': 'Add New Route',
+      'admin.addBus': 'Add Bus to Fleet',
+      'admin.createPromotion': 'Create Promotion',
+      'admin.viewReports': 'View Reports',
+      'admin.recentBookings': 'Recent Bookings',
+    }
+  },
+  ar: {
+    translation: {
+      // Navigation
+      'nav.home': 'الرئيسية',
+      'nav.routes': 'الطرق',
+      'nav.about': 'حول',
+      'nav.support': 'الدعم',
+      'nav.signin': 'تسجيل الدخول',
+      'nav.signout': 'تسجيل الخروج',
+      
+      // Hero Section
+      'hero.title': 'رحلة عبر',
+      'hero.titleHighlight': 'الأرض المقدسة',
+      'hero.subtitle': 'خدمات حافلات فاخرة تربط مدن المملكة العربية السعودية المقدسة',
+      'hero.oneWay': 'ذهاب فقط',
+      'hero.roundTrip': 'ذهاب وعودة',
+      'hero.from': 'السفر من مدينة',
+      'hero.to': 'السفر إلى مدينة',
+      'hero.travelDate': 'تاريخ السفر',
+      'hero.returnDate': 'تاريخ العودة',
+      'hero.passengers': 'عدد الركاب',
+      'hero.passenger': 'راكب',
+      'hero.fullTicketNote': 'تذكرة كاملة مطلوبة للأطفال فوق 6 سنوات',
+      'hero.searchBuses': 'البحث عن الحافلات',
+      'hero.showBusTrips': 'عرض رحلات الحافلات',
+      
+      // Cities
+      'city.riyadh': 'الرياض',
+      'city.jeddah': 'جدة',
+      'city.makkah': 'مكة المكرمة',
+      'city.madinah': 'المدينة المنورة',
+      'city.dammam': 'الدمام',
+      
+      // Search Results
+      'search.availableBuses': 'الحافلات المتاحة',
+      'search.departure': 'المغادرة',
+      'search.arrival': 'الوصول',
+      'search.duration': 'المدة',
+      'search.availableSeats': 'المقاعد المتاحة',
+      'search.selectSeats': 'اختيار المقاعد',
+      
+      // Seat Selection
+      'seat.selectSeats': 'اختر مقاعدك',
+      'seat.available': 'متاح',
+      'seat.selected': 'محدد',
+      'seat.occupied': 'محجوز',
+      'seat.bookingSummary': 'ملخص الحجز',
+      'seat.selectedSeats': 'المقاعد المحددة',
+      'seat.ticketPrice': 'سعر التذكرة',
+      'seat.serviceFee': 'رسوم الخدمة',
+      'seat.total': 'الإجمالي',
+      'seat.promoCode': 'كود الخصم',
+      'seat.enterPromoCode': 'أدخل كود الخصم',
+      'seat.apply': 'تطبيق',
+      'seat.continueToPassenger': 'متابعة إلى بيانات الراكب',
+      
+      // Booking Confirmation
+      'booking.confirmed': 'تم تأكيد الحجز!',
+      'booking.successMessage': 'تم حجز تذكرتك بنجاح',
+      'booking.reference': 'مرجع الحجز:',
+      'booking.tripDetails': 'تفاصيل الرحلة',
+      'booking.route': 'الطريق',
+      'booking.date': 'التاريخ',
+      'booking.seat': 'المقعد',
+      'booking.bus': 'الحافلة',
+      'booking.passenger': 'الراكب',
+      'booking.payment': 'الدفع',
+      'booking.digitalTicket': 'التذكرة الرقمية',
+      'booking.showQR': 'اعرض هذا الرمز في بوابة الصعود',
+      'booking.downloadPDF': 'تحميل تذكرة PDF',
+      'booking.shareTicket': 'مشاركة التذكرة',
+      'booking.viewBookings': 'عرض حجوزاتي',
+      'booking.bookAnother': 'احجز رحلة أخرى',
+      
+      // User Dashboard
+      'dashboard.myAccount': 'حسابي',
+      'dashboard.manageBookings': 'إدارة حجوزاتك ومعلومات الملف الشخصي',
+      'dashboard.myBookings': 'حجوزاتي',
+      'dashboard.profileSettings': 'إعدادات الملف الشخصي',
+      'dashboard.notifications': 'الإشعارات',
+      'dashboard.upcomingTrips': 'الرحلات القادمة',
+      'dashboard.pastTrips': 'الرحلات السابقة',
+      'dashboard.confirmed': 'مؤكد',
+      'dashboard.completed': 'مكتمل',
+      'dashboard.showTicket': 'عرض التذكرة',
+      'dashboard.cancel': 'إلغاء',
+      'dashboard.downloadReceipt': 'تحميل الإيصال',
+      
+      // Authentication
+      'auth.welcome': 'مرحباً بك في الحرمين',
+      'auth.signInMessage': 'سجل دخولك لحجز رحلتك',
+      'auth.phoneNumber': 'رقم الهاتف',
+      'auth.sendOTP': 'إرسال الرمز',
+      'auth.continueWith': 'أو متابعة مع',
+      'auth.enterOTP': 'أدخل الرمز',
+      'auth.otpSent': 'أرسلنا رمز التحقق إلى',
+      'auth.verify': 'تحقق وسجل الدخول',
+      'auth.resendOTP': 'إعادة إرسال الرمز',
+      
+      // Live Chat
+      'chat.liveSupport': 'الدعم المباشر',
+      'chat.onlineNow': 'متصل الآن',
+      'chat.welcomeMessage': 'مرحباً بك في الحرمين! كيف يمكننا مساعدتك اليوم؟',
+      'chat.supportAgent': 'موظف الدعم',
+      'chat.typeMessage': 'اكتب رسالتك...',
+      
+      // Footer
+      'footer.tagline': 'ربط المدن المقدسة في المملكة العربية السعودية بالراحة والموثوقية والتكنولوجيا الحديثة.',
+      'footer.quickLinks': 'روابط سريعة',
+      'footer.bookTrip': 'احجز رحلة',
+      'footer.manageBooking': 'إدارة الحجز',
+      'footer.busSchedules': 'جداول الحافلات',
+      'footer.routeMap': 'خريطة الطرق',
+      'footer.support': 'الدعم',
+      'footer.helpCenter': 'مركز المساعدة',
+      'footer.contactUs': 'اتصل بنا',
+      'footer.terms': 'شروط الخدمة',
+      'footer.privacy': 'سياسة الخصوصية',
+      'footer.contactInfo': 'معلومات الاتصال',
+      'footer.copyright': '© 2024 خدمات الحرمين للحافلات. جميع الحقوق محفوظة. مرخص من هيئة النقل السعودية.',
+      
+      // Common
+      'common.loading': 'جارٍ التحميل...',
+      'common.error': 'خطأ',
+      'common.retry': 'إعادة المحاولة',
+      'common.close': 'إغلاق',
+      'common.save': 'حفظ',
+      'common.cancel': 'إلغاء',
+      'common.name': 'الاسم',
+      'common.phone': 'الهاتف',
+      'common.email': 'البريد الإلكتروني',
+      'common.status': 'الحالة',
+      'common.amount': 'المبلغ',
+      'common.method': 'الطريقة',
+      'common.paid': 'مدفوع',
+      'currency.sar': 'ر.س',
+      
+      // Payment
+      'payment.securePayment': 'دفع آمن',
+      'payment.completeBooking': 'أكمل حجزك بدفع آمن',
+      'payment.bookingSummary': 'ملخص الحجز',
+      'payment.selectedSeats': 'المقاعد المحددة',
+      'payment.passengers': 'الركاب',
+      'payment.subtotal': 'المجموع الفرعي',
+      'payment.discount': 'الخصم',
+      'payment.total': 'الإجمالي',
+      'payment.bookingRef': 'مرجع الحجز',
+      'payment.paymentMethod': 'طريقة الدفع',
+      'payment.payNow': 'ادفع الآن',
+      'payment.processing': 'جارٍ المعالجة...',
+      'payment.back': 'العودة لاختيار المقاعد',
+      'payment.secureNote': 'معلومات الدفع الخاصة بك مشفرة وآمنة',
+      'payment.cardDetails': 'تفاصيل البطاقة',
+      
+      // Admin
+      'admin.dashboard': 'لوحة الإدارة',
+      'admin.manageOperations': 'إدارة العمليات والطرق وعرض التحليلات',
+      'admin.totalBookings': 'إجمالي الحجوزات',
+      'admin.revenueToday': 'الإيرادات اليوم',
+      'admin.activeRoutes': 'الطرق النشطة',
+      'admin.fleetSize': 'حجم الأسطول',
+      'admin.quickActions': 'إجراءات سريعة',
+      'admin.addRoute': 'إضافة طريق جديد',
+      'admin.addBus': 'إضافة حافلة للأسطول',
+      'admin.createPromotion': 'إنشاء عرض ترويجي',
+      'admin.viewReports': 'عرض التقارير',
+      'admin.recentBookings': 'الحجوزات الحديثة',
+    }
+  }
+};
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: 'en',
+    interpolation: {
+      escapeValue: false,
+    },
+  });
+
+export default i18n;
